@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.billing;
+
+service BillingPeriodService{
+  rpc getBillingPeriod(BillingPeriodRequestDto) returns (BillingPeriodResponseDto);
+}
+
+
+message BillingPeriodRequestDto {
+  int64 date = 1;
+}
+
+
+message BillingPeriodResponseDto{
+  string periodId = 1;
+}
